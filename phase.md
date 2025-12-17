@@ -52,7 +52,7 @@
 ---
 
 ## Phase 5 - API & Backend Infrastructure
-**Status**: Pending
+**Status**: ✅ Completed
 **Files**:
 - `backend/config.py` - Global configurations (confidence threshold, paths)
 - `backend/database.py` - Optional SQLite setup for logs
@@ -67,7 +67,7 @@
 ---
 
 ## Phase 6 - Frontend UI
-**Status**: Pending
+**Status**: ✅ Completed
 **Files**:
 - `frontend/app.py` - Streamlit chatbot UI
 - `frontend/ui_components.py` - UI helper components
@@ -105,25 +105,90 @@
 
 ## Completion Summary
 
-### ✅ Completed Phases (4/8)
+### ✅ Completed Phases (6/8)
 1. **Phase 1** - Data Layer ✅
 2. **Phase 2** - NLP Pipeline ✅
 3. **Phase 3** - ML Model ✅
 4. **Phase 4** - Knowledge Base & Response ✅
+5. **Phase 5** - API & Backend Infrastructure ✅
+6. **Phase 6** - Frontend UI ✅
 
-### ⏳ Pending Phases (4/8)
-5. **Phase 5** - API & Backend Infrastructure
-6. **Phase 6** - Frontend UI
+### ⏳ Pending Phases (2/8)
 7. **Phase 7** - Testing, Requirements & Deployment
 8. **Phase 8** - ML Operations (Optional)
 
+### 🏗️ Phase 5 Implementation Details
+**API Endpoints**:
+- `GET /health/status` - Health check
+- `GET /health/stats` - Chatbot statistics
+- `GET /health/config` - API configuration
+- `POST /chat/ask` - Main chatbot endpoint
+- `GET /chat/logs` - Chat history
+- `GET /chat/intents` - Available intents
+
+**Backend Components**:
+- **config.py** - Settings management with Pydantic
+- **database.py** - SQLite logging (chat_logs, low_confidence_queries)
+- **logger.py** - Rotating file logger
+- **helpers.py** - Response formatting, query validation, utilities
+- **health.py** - Health check endpoints
+- **chat_api.py** - Chat processing pipeline
+- **main.py** - FastAPI app with CORS middleware
+
+### 📱 Phase 6 Implementation Details
+**Streamlit Features**:
+- Real-time chat interface
+- Message history with intent/confidence display
+- Statistics dashboard (total chats, low confidence queries, avg confidence)
+- Quick action buttons (Courses, Admissions, About)
+- Backend health status indicator
+- Available intents sidebar display
+- Response source tracking (Knowledge Base vs Fallback)
+
+**UI Components**:
+- Chat message display with role distinction
+- Confidence badges with emoji levels
+- Intent cards with metrics
+- Statistics dashboard
+- Error/Success/Info message display
+- Clear chat history button
+
 ### 📦 Dependencies
 All required dependencies have been installed successfully from `requirements.txt`:
-- FastAPI, Uvicorn (Web Framework)
-- Streamlit (Frontend)
-- Scikit-learn, Pandas, NumPy (ML)
-- BeautifulSoup4 (Web Scraping)
-- Pytest (Testing)
+- **FastAPI, Uvicorn** (Web Framework)
+- **Streamlit** (Frontend)
+- **Scikit-learn, Pandas, NumPy** (ML)
+- **BeautifulSoup4** (Web Scraping)
+- **Pytest** (Testing)
+- **Pydantic** (Data validation)
+
+---
+
+## 🚀 Running the Application
+
+### Backend (FastAPI)
+```bash
+cd backend
+python main.py
+# Or using uvicorn directly:
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+The API will be available at `http://localhost:8000`
+- API Docs: `http://localhost:8000/docs`
+- Health Check: `http://localhost:8000/health/status`
+
+### Frontend (Streamlit)
+```bash
+cd frontend
+streamlit run app.py
+```
+The UI will be available at `http://localhost:8501`
+
+### Running Both Together
+Use the `run.bat` script (Windows):
+```bash
+run.bat
+```
 
 ---
 
