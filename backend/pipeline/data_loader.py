@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 
 class DataLoader:
-    def __init__(self, data_path: str = 'data/processed/sfgc_intents.json'):
+    def __init__(self, data_path: str = 'backend/knowledge_base/sfgc_intents.json'):
         self.data_path = data_path
         self.intents = []
         self.patterns = []
@@ -93,4 +93,9 @@ class DataLoader:
     def prepare_training_data(self) -> Tuple[List[str], List[str]]:
         """Prepare data for training"""
         patterns, labels = self.extract_patterns_and_labels()
+        
+        if not patterns or not labels:
+            logger.error("No patterns or labels found in training data")
+            return None, None
+            
         return patterns, labels

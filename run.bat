@@ -45,11 +45,10 @@ if errorlevel 1 (
 
 REM Train ML model
 echo [3/4] Training ML model...
-python backend/pipeline/data_loader.py
-python backend/ml/train.py
+python train_model.py
 if errorlevel 1 (
     echo Error: Model training failed
-    echo Please check your training data file
+    echo Please check the error messages above
     pause
     exit /b 1
 )
