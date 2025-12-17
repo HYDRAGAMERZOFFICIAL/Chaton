@@ -1,0 +1,3 @@
+"""
+Maps intent → official answer
+"""

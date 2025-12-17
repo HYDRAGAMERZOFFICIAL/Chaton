@@ -1,0 +1,3 @@
+"""
+Splits sentences into words
+"""
