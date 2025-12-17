@@ -1,1 +1,62 @@
-# Raw text scraped from website
+[
+  {
+    "url": "https://www.sfgc.ac.in/",
+    "title": "SFGC - Sri Satya Sai Group of Colleges",
+    "content": "Welcome to Sri Satya Sai Group of Colleges. We are committed to providing quality education and holistic development of students.",
+    "paragraphs": [
+      "Welcome to Sri Satya Sai Group of Colleges.",
+      "We are committed to providing quality education and holistic development of students.",
+      "Our institution offers various undergraduate and postgraduate courses."
+    ],
+    "page_type": "home",
+    "links": []
+  },
+  {
+    "url": "https://www.sfgc.ac.in/about",
+    "title": "About SFGC",
+    "content": "Sri Satya Sai Group of Colleges was founded with a vision to provide excellent education. The institution has a strong faculty and excellent infrastructure.",
+    "paragraphs": [
+      "Sri Satya Sai Group of Colleges was founded with a vision to provide excellent education.",
+      "The institution has a strong faculty and excellent infrastructure.",
+      "We have state-of-the-art laboratories and learning facilities."
+    ],
+    "page_type": "about",
+    "links": []
+  },
+  {
+    "url": "https://www.sfgc.ac.in/academics",
+    "title": "Academics - SFGC",
+    "content": "Our academic programs are designed to meet international standards. We offer courses in Engineering, Management, and Science.",
+    "paragraphs": [
+      "Our academic programs are designed to meet international standards.",
+      "We offer courses in Engineering, Management, and Science.",
+      "Each program is designed to develop critical thinking and practical skills."
+    ],
+    "page_type": "academics",
+    "links": []
+  },
+  {
+    "url": "https://www.sfgc.ac.in/admissions",
+    "title": "Admissions - SFGC",
+    "content": "Admission process is simple and transparent. Students can apply online through our portal. Admission requirements include qualifying entrance exams and academic performance.",
+    "paragraphs": [
+      "Admission process is simple and transparent.",
+      "Students can apply online through our portal.",
+      "Admission requirements include qualifying entrance exams and academic performance."
+    ],
+    "page_type": "admissions",
+    "links": []
+  },
+  {
+    "url": "https://www.sfgc.ac.in/contact",
+    "title": "Contact Us - SFGC",
+    "content": "You can reach us at our campus located in the heart of the city. Phone: +91-XXXXXXXXXX Email: info@sfgc.ac.in",
+    "paragraphs": [
+      "You can reach us at our campus located in the heart of the city.",
+      "Phone: +91-XXXXXXXXXX",
+      "Email: info@sfgc.ac.in"
+    ],
+    "page_type": "contact",
+    "links": []
+  }
+]
